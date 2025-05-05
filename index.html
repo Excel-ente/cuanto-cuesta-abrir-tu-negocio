@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ¿Cuánto cuesta abrir tu negocio hoy?</title>
+
+    <meta name="description" content="Calculadora interactiva y gratuita para emprendedoras. Descubrí tu costo diario de apertura, entendé tus gastos fijos y asegurá la rentabilidad de tu negocio en Argentina.">
+    <meta name="keywords" content="calculadora costos diarios, costo apertura negocio, gastos fijos emprendedor, rentabilidad negocio, emprender argentina, ademasistemas, calculadora emprendedora">
+    <meta name="author" content="ADEMASistemas.com">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="¿Cuánto cuesta abrir hoy? - Calculadora Clave para Emprendedoras">
+    <meta property="og:description" content="Descubrí tu costo diario para operar tu negocio y tomá decisiones más inteligentes. ¡Herramienta gratuita!">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="calculadora.css"> <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <header class="hero-section">
+            <div class="logo-container">
+                <img src="logo.svg" alt="Logo Excel-ente" class="logo-image" style="max-height: 220px;">
+            </div>
+
+            <h1>¿Cuánto cuesta abrir hoy tu negocio?</h1>
+            <p class="intro-paragraph">
+                Hoy vamos a ver ese <b>costo fijo diario</b> que tiene tu negocio por el simple hecho de abrir.</p>
+                <p>Este valor te ayuda a entender cuánto necesitás vender como base cada día para no perder plata. Y más importante aún, como buen emprendedor, sabés que hay días de muchas ventas y otros más tranquilos, este <b>número</b> te permite <u>planificar mejor</u> para que los días "buenos" ayuden a cubrir los costos de los días "flojos" y que a fin de mes, ¡todo cierre de manera Excel-ente! 😊
+            </p>
+            <a href="#calculadora" class="btn btn-primary smooth-scroll">¡Quiero Calcularlo Ahora!</a>
+        </header>
+
+        <section class="porque-calcular-section edu-section">
+            <div class="section-header">
+                <h2>🤔 ¿Para qué me sirve saber cuánto cuesta abrir cada día?</h2>
+                <p class="section-intro">Este numerito es más poderoso de lo que parece. Entenderlo te da claridad y control sobre tu negocio:</p>
+            </div>
+            <div class="edu-grid four-cols">
+                <div class="edu-card">
+                    <div class="edu-icon">✔️</div>
+                    <h3>Ponés un Piso Firme</h3>
+                    <p>Sabrás el mínimo indispensable que tenés que generar diariamente solo para cubrir tus gastos fijos operativos. ¡Es tu punto de partida!</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">🚫</div>
+                    <h3>Evitás Vender a Pérdida</h3>
+                    <p>El error común es pensar solo en el costo del producto. Si no cubrís gastos tus fijos diarios, podrías estar perdiendo plata sin darte cuenta.</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">🎯</div>
+                    <h3>Definís Metas Reales</h3>
+                    <p>Te ayuda a ponerte objetivos de venta diarios/semanales más claros. ¿Cuánto más necesitás vender sobre este costo para ganar lo que querés?</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">💡</div>
+                    <h3>Tomás Mejores Decisiones</h3>
+                    <p>¿Podés cerrar un día? ¿Cuánto impacta? ¿Necesitás ajustar precios? Conocer tu costo diario te da información clave para decidir.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="costos-invisibles-section edu-section">
+            <div class="section-header">
+                <h2>💸 Esos Gastos que "No Se Ven" pero Suman</h2>
+                 <p class="section-intro">Para calcular tu costo diario de apertura, nos enfocamos en los <strong>Costos Fijos</strong>: esos que tenés todos los meses, vendas 1 o 100 unidades, abras 10 días o 30. ¡Son la base de tu estructura!</p>
+            </div>
+            <div class="edu-grid costs-grid">
+                 <div class="edu-card cost-card">
+                    <div class="edu-icon">👷‍♀️</div>
+                    <h3>Tu Sueldo: ¡El Más Importante (y Olvidado)!</h3>
+                    <p>¡Tu trabajo VALE! Tenés que asignarte un sueldo mensual realista por tu tiempo, esfuerzo y conocimiento. Es un costo fijo CLAVE. ¿Cuánto necesitás o querés ganar por mes?</p>
+                </div>
+                <div class="edu-card cost-card">
+                    <div class="edu-icon">🏠</div>
+                    <h3>El Lugar (Físico o Virtual):</h3>
+                    <p>Alquiler de local, taller, consultorio, o la parte proporcional de tu casa si trabajás ahí. Incluso costos fijos de tu tienda online (plataforma, dominio) entran aquí.</p>
+                </div>
+                 <div class="edu-card cost-card">
+                    <div class="edu-icon">💡</div>
+                    <h3>Servicios Esenciales:</h3>
+                    <p>Luz, agua, gas, internet, abono del celular/posnet. Aunque la factura sea mensual, son gastos necesarios CADA DÍA que tu negocio opera. Hay que prorratearlos.</p>
+                </div>
+                 <div class="edu-card cost-card">
+                    <div class="edu-icon">🧾</div>
+                    <h3>Impuestos y Obligaciones:</h3>
+                    <p>Monotributo, Ingresos Brutos, tasas municipales, seguros obligatorios... Gastos fijos necesarios para trabajar en regla. ¡No te olvides!</p>
+                </div>
+                 <div class="edu-card cost-card">
+                    <div class="edu-icon">🛒</div>
+                    <h3>Otros Fijos "Hormiga":</h3>
+                    <p>Suscripciones (software, apps), limpieza periódica, marketing básico mensual (ej: pauta mínima), gastos bancarios fijos, etc. ¡Anotá todo!</p>
+                </div>
+                 <div class="edu-card cost-card conclusion-card">
+                    <div class="edu-icon">➕</div>
+                    <h3>¡Todo Suma!</h3>
+                    <p>La suma de todos estos ítems te da el total de Gastos Fijos Mensuales, la base para calcular cuánto te cuesta abrir CADA DÍA.</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="calculator-outer-container" id="calculadora">
+            <div class="calculator-container">
+                <h2>👇 ¡Ahora sí! Calculá tu Costo Diario de Apertura 👇</h2>
+                <p class="section-intro calculator-intro">Completá con tus gastos <strong>MENSUALES</strong> estimados. ¡Sé lo más realista posible!</p>
+                <form id="costo-diario-form">
+                    <div class="form-group">
+                        <label for="sueldo">💰 Tu Sueldo Esperado Mensual:</label>
+                        <input type="number" id="sueldo" name="sueldo" placeholder="Ej: 250000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alquiler">🏠 Alquiler Mensual (o costo del espacio):</label>
+                        <input type="number" id="alquiler" name="alquiler" placeholder="Ej: 80000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicios">💡 Servicios Mensuales (Luz, Agua, Internet, etc.):</label>
+                        <input type="number" id="servicios" name="servicios" placeholder="Ej: 20000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="impuestos">🧾 Impuestos Mensuales (Monotributo, Tasas, etc.):</label>
+                        <input type="number" id="impuestos" name="impuestos" placeholder="Ej: 15000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="otros">🛒 Otros Gastos Fijos Mensuales (Limpieza, Marketing, Soft, etc.):</label>
+                        <input type="number" id="otros" name="otros" placeholder="Ej: 10000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dias">🗓️ ¿Cuántos días REALES abrís o trabajás al mes?</label>
+                        <input type="number" id="dias" name="dias" placeholder="Ej: 22" min="1" required>
+                        <small class="field-hint">Contá solo los días que efectivamente generás (o podés generar) ingresos.</small>
+                    </div>
+
+                    <button type="submit" class="btn-calcular">¡Calcular Mi Costo Diario!</button>
+                </form>
+            </div>
+        </main>
+
+        <section id="resultado-container" class="resultado-card" style="display: none;">
+             <h3>🎉 ¡Acá está tu número clave! 🎉</h3>
+            <p id="resultado-texto"></p>
+            <p class="resultado-contexto">
+                Recordá: este es el monto MÍNIMO que tus ventas diarias deben generar solo para cubrir los gastos de 'estar abierta'. A partir de acá, tenés que sumar el costo variable de tus productos/servicios y tu ganancia deseada para definir tus precios finales.
+            </p>
+            <button id="exportar-pdf" class="btn-exportar">📋 Exportar Resumen a PDF</button>
+        </section>
+
+        <section class="proximos-pasos-section edu-section">
+             <div class="section-header">
+                <h2>🚀 ¡Bien! Ya tenés tu Costo Diario Fijo. ¿Cómo sigo?</h2>
+                <p class="section-intro">Este número es tu base, tu "costo de existir" diario. ¡Felicitaciones por calcularlo! Ahora podés...</p>
+             </div>
+             <div class="edu-grid three-cols">
+                 <div class="edu-card next-step-card">
+                     <div class="edu-icon">📊</div>
+                     <h3>Analizá Tus Números</h3>
+                     <p>¿El costo diario te parece alto? ¿Bajo? ¿Hay algún gasto fijo que podrías optimizar? Este cálculo te da una foto clara de tu estructura.</p>
+                 </div>
+                 <div class="edu-card next-step-card">
+                     <div class="edu-icon">➕</div>
+                     <h3>Sumá lo Variable y la Ganancia</h3>
+                     <p>Para poner precios, necesitás sumar a este costo fijo (prorrateado) el costo variable de CADA producto/servicio y tu margen de ganancia deseado.</p>
+                 </div>
+                  <div class="edu-card next-step-card">
+                     <div class="edu-icon">🏁</div>
+                     <h3>Usalo como Meta Diaria</h3>
+                     <p>¡Este es tu primer objetivo de ventas cada día! Asegurate de cubrir este monto como mínimo. Todo lo que vendas por encima empieza a generar tu ganancia real.</p>
+                 </div>
+             </div>
+             <div class="resource-link">
+                 <p>¿Necesitás ayuda para calcular el costo variable de tus productos o definir precios? ¡Pronto tendremos más herramientas para vos en ADEMASistemas!</p>
+                 </div>
+        </section>
+        <section id="faq" class="faq-section">
+            <div class="container">
+              <h2>Preguntas frecuentes</h2>
+          
+              <div class="faq-item">
+                <button class="faq-question">¿Este cálculo me dice a cuánto tengo que vender mis productos/servicios?</button>
+                <div class="faq-answer">
+                  <p>No directamente. Este número es tu <strong>costo fijo diario</strong>, ¡la base! Para saber el precio final, todavía te falta sumar el costo de los materiales o ingredientes de CADA producto (podes ver nuestro artículo <a href="https://calculadoraderecetas.com.ar/">¿cómo calcular el costo de tus productos?</a> ) y la ganancia que querés obtener. ¡Pero conocer esta base es el primer gran paso!</p>
+                </div>
+              </div>
+    
+              <div class="faq-item">
+                <button class="faq-question">¿Por qué tengo que incluir mi "sueldo" si la plata igual va para mí?</button>
+                <div class="faq-answer">
+                  <p>¡Porque tu tiempo y esfuerzo valen! Pensá así: si contrataras a alguien para hacer tu trabajo, le pagarías un sueldo, ¿verdad? Incluir tu sueldo te ayuda a ver si el negocio es realmente rentable por sí mismo y te asegura que estás cubriendo tus propias necesidades. ¡No trabajes gratis en tu propio emprendimiento!</p>
+                </div>
+              </div>
+    
+              <div class="faq-item">
+                <button class="faq-question">Mis gastos cambian un poco cada mes (ej: la luz en invierno). ¿Cómo lo pongo?</button>
+                <div class="faq-answer">
+                  <p>¡Buena pregunta! Para la calculadora, intentá poner un <strong>promedio</strong> mensual. Si un mes gastás $10.000 y otro $12.000, podés poner $11.000. Lo importante es tener una idea general. Podés volver a calcularlo cada tanto para ajustar si ves cambios grandes o estacionales.</p>
+                </div>
+              </div>
+    
+              <div class="faq-item">
+                <button class="faq-question">Trabajo desde casa, ¿cómo calculo el "alquiler" o los "servicios"?</button>
+                <div class="faq-answer">
+                  <p>¡Muy común! Calculá qué <strong>porcentaje</strong> de tu casa usás <strong>principalmente</strong> para el negocio (ej: una habitación de cuatro = 25%) y qué <strong>porcentaje</strong> del tiempo usás servicios como internet o luz para trabajar. Aplicá ese porcentaje a tus gastos totales de casa (alquiler/impuestos inmobiliarios, luz, internet) para sacar la parte que le "corresponde" a tu emprendimiento. ¡Sé realista!</p>
+                </div>
+              </div>
+    
+              <div class="faq-item">
+                <button class="faq-question">¿Qué diferencia hay entre estos "gastos fijos" y los otros gastos?</button>
+                <div class="faq-answer">
+                 <p>Fácil: los <strong>fijos</strong> los tenés todos los meses, vendas mucho, poco o nada (como el alquiler, tu sueldo, el monotributo). Los <strong>variables</strong> dependen DIRECTAMENTE de cuánto vendés (como los ingredientes para hacer una torta: si hacés más tortas, gastás más ingredientes). Esta calculadora se enfoca en los fijos, ¡la base para poder "abrir la persiana" cada día!</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+    </div> 
+
+    <footer>
+        <div class="container"> <div class="social-links">
+                <a href="https://www.instagram.com/excel.entes" target="_blank" rel="noopener noreferrer" aria-label="Instagram Excel-ente" title="Instagram Excel-ente">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" height="1.5em"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9 26.3 26.2 58 34.4 93.9 36.2 37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@excel-ente" target="_blank" rel="noopener noreferrer" aria-label="Youtube Excel-ente" title="Youtube Excel-ente"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" height="1.5em"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.203z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@excel.entes" target="_blank" rel="noopener noreferrer" aria-label="TikTok Excel-ente" title="TikTok Excel-ente">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" height="1.5em"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                </a>
+            </div>
+
+            <p class="footer-note" style="color: aliceblue;">Hecho con ❤️ por <a href="https://excel-ente.com/" target="_blank" rel="noopener noreferrer">Excel-ente</a> para ayudar a emprendedor@s como vos 🚀</p> 
+            
+            <p class="copyright">
+                © <span id="current-year"></span> EXCEL-ENTE | Todos los derechos reservados | 
+                <a href="politica-privacidad.html">Política de Privacidad</a> | 
+                <a href="acerca-de.html">Acerca de</a> | 
+                <a href="contacto.html">Contacto</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', () => {
+            item.classList.toggle('open');
+        });
+        });
+
+    </script>
+</body>
+</html>

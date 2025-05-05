@@ -1,0 +1,542 @@
+/* --- Variables de Color (Ajusta según tus estilos base) --- */
+:root {
+    --color-principal: #f8f7fc; /* Lila muy pálido (fondo) */
+    --color-secundario: #e9d8f3; /* Orquídea Pálido (acentos suaves) */
+    --color-acento: #9c55b8;   /* Orquídea Medio (botones, títulos) */
+    --color-acento-hover: #7e4595; /* Más oscuro para hover */
+    --color-texto: #4a4a4a;    /* Gris oscuro (texto principal) */
+    --color-texto-claro: #FFFFFF; /* Blanco */
+    --color-texto-secundario: #6e6e6e; /* Gris medio */
+    --color-borde: #dcdcdc;   /* Gris claro (bordes suaves) */
+    --color-sombra: rgba(156, 85, 184, 0.12); /* Sombra suave con color acento */
+    --color-fondo-card: #FFFFFF; /* Blanco para cards */
+    --color-fondo-seccion-alt: #fdfcff; /* Fondo muy suave para alternar secciones */
+
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* --- Reseteo Básico y Estilos Globales --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Para el smooth scroll */
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    line-height: 1.7; /* Un poco más de espacio entre líneas */
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased; /* Mejor renderizado de fuentes */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 1rem 1.5rem; /* Espaciado interno */
+    flex-grow: 1;
+}
+
+/* --- Tipografía y Elementos Comunes --- */
+h1, h2, h3 {
+    color: var(--color-acento);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centrar títulos de sección */
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-texto-secundario);
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento-hover);
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+/* --- Header / Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 3rem 0 2rem 0; /* Más padding arriba */
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo-container svg {
+    max-width: 120px;
+    height: auto;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+    font-weight: 500;
+}
+
+.intro-paragraph {
+    max-width: 750px;
+    margin: 1rem auto 1.5rem auto;
+    font-size: 1.05rem;
+}
+
+/* --- Secciones Educativas (.edu-section) --- */
+.edu-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-borde); /* Separador sutil */
+}
+
+.edu-section:last-of-type {
+    border-bottom: none; /* No borde en la última */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid para Cards Educativas */
+.edu-grid {
+    display: grid;
+    gap: 1.5rem; /* Espacio entre cards */
+    margin-top: 2rem;
+}
+
+/* Layouts de Grid Comunes */
+.edu-grid.two-cols { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.edu-grid.three-cols { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.edu-grid.four-cols { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+/* Estilo de las Cards Educativas */
+.edu-card {
+    background-color: var(--color-fondo-card);
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--color-sombra);
+    text-align: center;
+    border: 1px solid var(--color-borde);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(156, 85, 184, 0.18);
+}
+
+.edu-card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-acento);
+}
+
+.edu-card p {
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 0; /* Quitar margen inferior en párrafo de card */
+}
+
+.edu-icon {
+    font-size: 2.5rem; /* Tamaño del emoji/icono */
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+/* Estilos específicos para la sección de Costos Invisibles */
+.cost-card h3 {
+    font-size: 1.1rem;
+}
+.costs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.conclusion-card {
+    background-color: var(--color-secundario); /* Fondo diferente para destacar */
+    border-color: var(--color-acento);
+}
+.conclusion-card h3 {
+    color: var(--color-acento-hover);
+}
+
+/* --- Contenedor de la Calculadora --- */
+.calculator-outer-container {
+    padding: 3rem 0;
+    background-color: var(--color-fondo-seccion-alt); /* Fondo suave diferente */
+    margin: 2rem 0; /* Separación vertical */
+     border-radius: 15px;
+}
+
+.calculator-container {
+    background-color: var(--color-fondo-card);
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px var(--color-sombra);
+    max-width: 700px; /* Limitar ancho de la calculadora */
+    margin: 0 auto; /* Centrar */
+}
+
+.calculator-container h2 {
+    text-align: center;
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.calculator-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+/* --- Formulario --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: textfield; /* Ocultar flechas en Firefox */
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px rgba(156, 85, 184, 0.2);
+}
+
+.field-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+    margin-top: 0.3rem;
+}
+
+/* --- Botones --- */
+.btn, .btn-calcular, .btn-exportar {
+    display: inline-block; /* Cambiado para permitir centrado en hero */
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--fuente-principal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none; /* Asegurar que no haya subrayado en enlaces con clase btn */
+}
+
+.btn-primary, .btn-calcular {
+    background-color: var(--color-acento);
+    color: var(--color-texto-claro);
+}
+.btn-primary:hover, .btn-calcular:hover {
+    background-color: var(--color-acento-hover);
+    transform: translateY(-2px);
+    color: var(--color-texto-claro);
+    text-decoration: none;
+}
+
+.btn-exportar {
+    background-color: var(--color-secundario);
+    color: var(--color-acento);
+    border: 1px solid var(--color-acento);
+    margin-top: 1rem; /* Espacio arriba del botón exportar */
+    display: block; /* Para que ocupe ancho en tarjeta resultado */
+    width: 100%;
+}
+.btn-exportar:hover {
+    background-color: #dcc0e8; /* Un tono más oscuro de secundario */
+    transform: translateY(-2px);
+     color: var(--color-acento-hover);
+     text-decoration: none;
+}
+
+/* Botón Calcular siempre en bloque y con margen superior */
+.btn-calcular {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/* --- Tarjeta de Resultado --- */
+.resultado-card {
+    background-color: var(--color-fondo-card);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px var(--color-sombra);
+    text-align: center;
+    margin: 2.5rem auto; /* Centrado y con margen */
+    border: 2px solid var(--color-acento);
+    max-width: 700px; /* Mismo ancho que calculadora */
+}
+
+.resultado-card h3 {
+    font-size: 1.6rem;
+    color: var(--color-acento);
+}
+
+#resultado-texto {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin: 1.5rem 0;
+    line-height: 1.4;
+}
+#resultado-texto strong {
+    font-size: 1.8rem; /* Hacer el número más grande */
+    color: var(--color-acento);
+    display: block; /* Poner el número en su propia línea */
+    margin-top: 0.5rem;
+}
+
+.resultado-contexto {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Sección Próximos Pasos --- */
+.next-step-card {
+    text-align: left; /* Alinear texto a la izquierda en estas cards */
+}
+.next-step-card .edu-icon {
+    text-align: center; /* Centrar solo el icono */
+}
+.resource-link {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-fondo-seccion-alt);
+    border-radius: 8px;
+}
+.resource-link p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* --- Pie de Página --- */
+
+  /* ==================== Footer ==================== */
+  footer {
+    background-color: var(--color-acento);
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 3rem; /* Separación de la última sección */
+  }
+  .footer-cta { font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .social-links a svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-principal);
+    transition: color 0.2s ease;
+  }
+  .social-links a:hover svg { color: var(--color-principal); }
+  .footer-note { max-width: 500px; margin: 0 auto 1rem; font-size: 0.9rem; }
+  .copyright { font-size: 0.85rem; color: var(--purple-600); }
+  
+
+  
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    margin-top: auto; /* Empuja al final */
+    color: #f0f0f0;
+}
+
+footer a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Estilos Responsive --- */
+@media (max-width: 992px) {
+     .edu-grid.four-cols { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+     .costs-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 1rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+
+    .edu-grid { grid-template-columns: 1fr; /* Apilar cards en pantallas medianas/pequeñas */ }
+    .edu-grid.four-cols, .edu-grid.three-cols, .edu-grid.two-cols, .costs-grid {
+         grid-template-columns: 1fr;
+    }
+    .edu-card { padding: 1.5rem; text-align: left;} /* Alinear texto a la izquierda */
+    .edu-card .edu-icon { text-align: center; } /* Mantener icono centrado */
+
+
+    .hero-section { padding: 2rem 0; }
+    .calculator-outer-container { padding: 2rem 0; }
+    .calculator-container { padding: 1.5rem; }
+    .resultado-card { padding: 1.5rem; }
+    #resultado-texto { font-size: 1.3rem; }
+    #resultado-texto strong { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 15px; }
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.2rem; }
+    .subtitle { font-size: 1.1rem; }
+    .intro-paragraph { font-size: 1rem; }
+    .section-intro { font-size: 1rem; }
+
+    label { font-size: 0.95rem; }
+    input[type="number"] { padding: 0.8rem; font-size: 0.95rem;}
+    .btn, .btn-calcular, .btn-exportar { font-size: 1rem; padding: 0.8rem 1.5rem; }
+    .btn-calcular { padding: 0.9rem; } /* Mantener botón principal más grande */
+
+    .resultado-card { padding: 1.5rem 1rem; }
+     #resultado-texto { font-size: 1.2rem; }
+    #resultado-texto strong { font-size: 1.5rem; }
+    .resultado-contexto { font-size: 0.9rem;}
+
+    footer { font-size: 0.85rem; }
+}
+
+
+
+
+/* FAQ */
+.faq-section {
+    padding: 3rem 0;
+    background: var(--color-fondo-seccion-alt);
+  }
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-acento);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--color-borde);
+    margin-bottom: 1rem;
+  }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    position: relative;
+    cursor: pointer;
+    color: var(--color-texto);
+  }
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    font-size: 1.25rem;
+    color: var(--color-acento);
+  }
+  .faq-item.open .faq-question::after {
+    content: "–";
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 0;
+  }
+  .faq-item.open .faq-answer {
+    max-height: 200px; /* o lo suficiente para tu contenido */
+    padding: 0.5rem 0;
+    color: var(--color-texto-secundario);
+  }
+  
